@@ -29,48 +29,50 @@ function displayUsers(output, id, data){
         // TO DO - complete the code to display the JSON data to the page
 
         // iterate through the data for the page's array and display it on the page
+        for(let user of currentPage){
         
-
             // create a container to store each user's content as we build our output
-            
+            let userSection = document.createElement("section");            
 
             // add a class to that section/each section containing a user
-            
+            userSection.classList.add("user");
 
             // create the image that will hold the user image in each section
-            
+            let profilePhoto = document.createElement("img");
 
             // set the image attributes so that it will display the correct image
-            
+            profilePhoto.src = `${"TO DO"}`;
+            profilePhoto.alt = `${"TO DO"} ${"TO DO"}`;
             
             // add the image to the current user section
-            
+            userSection.appendChild(profilePhoto);
 
             // create the heading to store the user name in each section
-
+            let userName = document.createElement("h3");
             
             // add the name to the element
-            
+            userName.textContent = `${"TO DO"} ${"TO DO"}`;
             
             // add the name to the section after the image
-            
+            userSection.appendChild(userName);
 
             // create the email address link for the user in each section
-            
+            let emailAddress = document.createElement("a");
             
             // set the link text and attributes
-            
+            emailAddress.href = `mailto:${"TO DO"}`;
+            emailAddress.textContent = `${"TO DO"}`;
             
             // add the email address to the section
-            
+            userSection.appendChild(emailAddress);
             
 
             // add the completed user section to the page before the pagination controls
-            
+            userContainer.appendChild(userSection);
 
             // empty the section of content to get it ready for the next user
-            
-        
+            userSection.nodeValue = "";
+        }
     }
 
     // get each of the links from the pagination and add event listeners to handle the pagination
